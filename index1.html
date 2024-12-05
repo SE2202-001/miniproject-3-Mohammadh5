@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- HTML Starter-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings Manager</title>
+    <!-- CSS Styling, import a costume font from google -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+        </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .upload-section, .filter-section, .job-listings {
+            margin-bottom: 20px;
+        }
+        .filter-section form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .filter-section form div {
+            flex: 1;
+        }
+        .job-listings ul {
+            list-style: none;
+            padding: 0;
+        }
+        .job-listings li {
+            background-color: #f9f9f9;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Job Listings Manager</h1>
+    </header>
+    <div class="container">
+        <div class="upload-section">
+            <h2>Upload Job Listings</h2>
+            <input type="file" id="fileUpload" accept=".json">
+        </div>
+        <div class="filter-section">
+            <form id="filterForm">
+                <div>
+                    <label for="jobLevel">Filter by Level:</label>
+                    <select id="jobLevel">
+                        <option value="">All</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="jobType">Filter by Type:</label>
+                    <select id="jobType">
+                        <option value="">All</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="jobSkill">Filter by Skill:</label>
+                    <select id="jobSkill">
+                        <option value="">All</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit">Filter Jobs</button>
+                </div>
+            </form>
+        </div>
+        <div class="sort-section">
+            <div>
+                <label for="sort">Sort By:</label>
+                <select id="sort">
+                    <option value="date">Date</option>
+                    <option value="title">Title</option>
+                </select>
+            </div>
+        </div>
+        <div class="job-listings">
+            <h2>Job Listings</h2>
+            <ul id="jobList">
+                <!-- Job listings will be displayed here -->
+            </ul>
+        </div>
+    </div>
+    <script src="JobAnalysis1.js"></script>
+</body>
+</html>
